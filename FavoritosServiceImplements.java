@@ -2,9 +2,11 @@ package com.viveflores.blogturistico.Service;
 
 import com.viveflores.blogturistico.Entity.Favoritos;
 import com.viveflores.blogturistico.Repository.FavoritosRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class FavoritosServiceImplements implements FavoritosService{
     private final FavoritosRepository favoritosRepository;
 
