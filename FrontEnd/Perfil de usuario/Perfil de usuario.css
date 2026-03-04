@@ -1,0 +1,89 @@
+:root {
+    --azul-oscuro: #1F2A44;
+    --gris-rosado: #8A7B7F;
+    --gris-claro: #B8B8C6;
+    --cafe: #7A4B2C;
+    --naranja: #C96F2D;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: var(--gris-claro);
+}
+
+header {
+    background-color: white;
+    color: var(--azul-oscuro);
+    text-align: center;
+    padding: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    border-bottom: 6px solid var(--cafe);
+}
+
+.contenedor {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.perfil {
+    background-color: white;
+    padding: 25px;
+    border-top: 8px solid var(--cafe);
+    max-width: 600px;
+    margin: auto;
+}
+
+.perfil img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.perfil h2 {
+    text-align: center;
+    color: var(--azul-oscuro);
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.info p {
+    font-size: 16px;
+    color: var(--gris-rosado);
+}
+
+.botones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 18px;
+    margin: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.editar {
+    background-color: var(--naranja);
+}
+
+.editar:hover {
+    background-color: var(--cafe);
+}
+
+.eliminar {
+    background-color: #b33939;
+}
+
+.eliminar:hover {
+    background-color: #7a1f1f;
+}

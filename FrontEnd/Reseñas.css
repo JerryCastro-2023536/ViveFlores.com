@@ -1,0 +1,65 @@
+:root {
+    --azul-oscuro: #1F2A44;
+    --gris-rosado: #8A7B7F;
+    --gris-claro: #B8B8C6;
+    --cafe: #7A4B2C;
+    --naranja: #C96F2D;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: var(--gris-claro);
+}
+
+header {
+    background-color: white;
+    color: var(--azul-oscuro);
+    text-align: center;
+    padding: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    border-bottom: 6px solid var(--cafe);
+}
+
+.contenedor {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.reseña {
+    background-color: white;
+    padding: 20px;
+    border-top: 8px solid var(--cafe);
+}
+
+.reseña h2 {
+    margin-top: 0;
+    color: var(--azul-oscuro);
+}
+
+label {
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 18px;
+    background-color: var(--naranja);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cafe);
+}
