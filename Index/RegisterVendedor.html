@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Vendedor - Vive Flores</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/RegisterVendedor.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Vive Flores</div>
+        <nav>
+            <ul>
+                <li><a href="/Index/PaginaPrincipal.html">Inicio</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="/Index/QuienesSomos.html">¿Quiénes Somos?</a></li>
+                <li><a href="/Index/Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="/Index/Login.html"><button class="btn-login">Iniciar Sesión</button></a>
+    </header>
+
+    <section class="hero-small">
+        <h1>Conviértete en Vendedor</h1>
+        <p>Registra tu negocio y llega a más turistas en la Isla de Flores</p>
+    </section>
+
+    <section class="register-container">
+        <div class="register-card">
+            <h2>Crear Cuenta de Vendedor</h2>
+            <p class="subtitle">Completa tu información personal y de negocio</p>
+
+            <form>
+                <div class="section-title">Información Personal</div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input type="text" placeholder="Tu apellido" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input type="text" placeholder="Nombre de usuario" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirmar Contraseña</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <div class="section-title">Información del Negocio</div>
+
+                <div class="form-group">
+                    <label>Nombre del Negocio / Publicación</label>
+                    <input type="text" placeholder="Nombre de tu establecimiento" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <textarea placeholder="Describe tu negocio o servicio..." rows="3" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Dirección</label>
+                        <input type="text" placeholder="Dirección en Flores, Petén" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="tel" placeholder="5555-5555" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Correo del Negocio</label>
+                    <input type="email" placeholder="negocio@ejemplo.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Horario de Atención</label>
+                        <input type="text" placeholder="Ej: Lun-Vie 8:00-18:00" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Categoría</label>
+                        <select required>
+                            <option value="" disabled selected>Selecciona...</option>
+                            <option>Restaurante</option>
+                            <option>Hospedaje</option>
+                            <option>Tour / Excursión</option>
+                            <option>Artesanías</option>
+                            <option>Transporte</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-register">Registrarme como Vendedor</button>
+            </form>
+
+            <p class="login-text">¿Ya tienes cuenta? <a href="/Index/Login.html">Inicia sesión</a></p>
+        </div>
+
+        <div class="register-image">
+            <img src="/img/islaFlores.jpg" alt="Isla de Flores, Petén">
+            <div class="image-caption">
+                <h3>Isla de Flores, Petén</h3>
+                <p>Comparte la magia de este destino con el mundo</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vive Flores — Isla de Flores, Petén, Guatemala</p>
+    </footer>
+
+</body>
+</html>
