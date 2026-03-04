@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f2e3e;
+    padding: 15px 40px;
+    color: white;
+    height: 100px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f6b93b;
+}
+
+.btn-login {
+    background: #f6b93b;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background: #e58e26;
+}
+
+.hero-small {
+    background: #1f7a8c;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-small h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.hero-small p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ── Grid de publicaciones ── */
+.publicaciones-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 40px;
+}
+
+/* ── Tarjeta ── */
+.pub-card {
+    background: white;
+    border-radius: 12px;
+    width: 340px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Imagen con badge ── */
+.pub-image {
+    position: relative;
+    height: 200px;
+}
+
+.pub-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #f6b93b;
+    color: #0f2e3e;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ── Contenido de la tarjeta ── */
+.pub-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.pub-body h3 {
+    font-size: 1.15rem;
+    color: #0f2e3e;
+    margin-bottom: 8px;
+}
+
+.descripcion {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+/* ── Info ── */
+.pub-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 0.83rem;
+    color: #444;
+}
+
+.label {
+    font-weight: bold;
+    color: #0f2e3e;
+    flex-shrink: 0;
+}
+
+/* ── Footer de la tarjeta ── */
+.pub-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.estado {
+    font-size: 0.78rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.estado.activo {
+    background: #d4edda;
+    color: #155724;
+}
+
+.estado.inactivo {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.fecha {
+    font-size: 0.78rem;
+    color: #888;
+}
+
+footer {
+    background: #0e3a46;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

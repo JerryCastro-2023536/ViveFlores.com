@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/subirPublicacion.css">
+    <title>subir publicacion</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Vive Flores</div>
+        <nav>
+            <ul>
+                <li><a href="/Index/PaginaPrincipal.html">Inicio</a></li>
+                <li><a href="/index/administrarMensajes.html">Mensajes</a></li>
+                <li><a href="/Index/administrarPublicaciones.html">Administrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-publicar">
+        <div class="card-form">
+            <h2>Crear Nueva Publicación</h2>
+            <p class="subtitle">complete los siguientes campos para realizar su publicacion</p>
+
+            <div class="form-section">
+                    <label for="titulo">Título de la publicación</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Ej: Arreglo de Boda Premium" required>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-section">
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria" name="categoria">
+                            <option value="elegir...">elegir...</option>
+                            <option value="categoria1">categoria1</option>
+                            <option value="categoria2">categria2</option>
+                            <option value="categoria3">categoria3</option>
+                            <option value="categoria4">categoria4</option>
+                            <option value="caategoria5">categoria5</option>
+                        </select>
+                    </div>
+                    <div class="form-section">
+                        <label for="precio">Precio</label>
+                        <input type="number" id="precio" name="precio" placeholder="0.00">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label for="descripcion">Descripción detallada</label>
+                    <textarea id="descripcion" name="descripcion" rows="5" placeholder="Escribe las características principales..."></textarea>
+                </div>
+
+                <div class="form-section">
+                    <label>Fotos del producto oservicio</label>
+                    <div class="upload-area">
+                        <span>Haz clic para subir o arrastra las imágenes</span>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="button" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-submit">Guardar Publicación</button>
+                </div>
+            </div>    
+        </div>
+    </main>
+</body>
+</html>
