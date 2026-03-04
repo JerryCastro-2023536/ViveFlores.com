@@ -1,6 +1,7 @@
 package com.viveflores.blogturistico.Service;
 
 import com.viveflores.blogturistico.Entity.Categorias;
+import com.viveflores.blogturistico.Exception.NotFoundExcepcion;
 import com.viveflores.blogturistico.Repository.CategoriasRepository;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,8 @@ public class CategoriasServiceImplements implements CategoriasService {
 
     @Override
     public Categorias getCategoriaById(Integer id) {
-        return categoriasRepository.findById(id).orElse(null);
+        return categoriasRepository.findById(id).orElseThrow(() ->
+                new NotFoundExcepcion("El id no existe"));
     }
 
     @Override
@@ -32,19 +34,18 @@ public class CategoriasServiceImplements implements CategoriasService {
 
     @Override
     public Categorias updateCategorias(Integer id, Categorias categorias) {
-        Categorias categorias1 = categoriasRepository.findById(id).orElse(null);
-        if (categorias1 != null) {
-            categorias1.setNombre_categoria(categorias.getNombre_categoria());
-            categorias1.setDescripcion(categorias.getDescripcion());
-        } else {
-            throw new IllegalArgumentException("El id no existe");
-        }
+        Categorias categorias1 = categoriasRepository.findById(id).orElseThrow(() ->
+                new NotFoundExcepcion("El id no existe"));
+
+        categorias1.setNombre_categoria(categorias.getNombre_categoria());
+        categorias1.setDescripcion(categorias.getDescripcion());
         return categoriasRepository.save(categorias1);
     }
 
     @Override
     public void deleteCategorias(Integer id) {
-        Categorias categorias = categoriasRepository.findById(id).orElse(null);
+        Categorias categorias = categoriasRepository.findById(id).orElseThrow(() ->
+                new NotFoundExcepcion("El id no existe"));
         categoriasRepository.delete(categorias);
     }
 }

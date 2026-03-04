@@ -1,6 +1,8 @@
 package com.viveflores.blogturistico.Controller;
 
 import com.viveflores.blogturistico.Entity.SolicitudPublicacion;
+import com.viveflores.blogturistico.Exception.FechasValidar;
+import com.viveflores.blogturistico.Exception.NotFoundExcepcion;
 import com.viveflores.blogturistico.Service.SolicitudPublicacionService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -14,6 +16,7 @@ import java.util.List;
 
 public class SolicitudPublicacionController {
     private final SolicitudPublicacionService solicitudPublicacionService;
+    FechasValidar fv = new FechasValidar();
 
     public SolicitudPublicacionController(SolicitudPublicacionService solicitudPublicacionService){ this.solicitudPublicacionService=solicitudPublicacionService;}
 
@@ -34,9 +37,10 @@ public class SolicitudPublicacionController {
     public ResponseEntity<Object> updateSolicitud(@PathVariable Integer id, @Valid @RequestBody SolicitudPublicacion solicitud){
         try {
             SolicitudPublicacion solicitudPubli= solicitudPublicacionService.getSolicitudById(id);
-            if(solicitudPubli==null){
-                return ResponseEntity.notFound().build();
+            if(solicitudPubli==null) {
+                throw new NotFoundExcepcion("El id no existe");
             }
+            fv.validarLocalDate(solicitud.getFecha_solicitud());
             solicitud.setId_solicitud(id);
 
             SolicitudPublicacion updateSolicitud= solicitudPublicacionService.updateSolicitud(id,solicitud);

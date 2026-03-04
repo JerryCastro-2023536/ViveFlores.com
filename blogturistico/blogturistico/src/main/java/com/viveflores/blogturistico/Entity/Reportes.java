@@ -1,6 +1,8 @@
 package com.viveflores.blogturistico.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
@@ -12,15 +14,19 @@ public class Reportes {
     @Column(name = "id_reporte")
     private Integer id_reporte;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "asunto")
     private String asunto;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "mensaje")
     private String mensaje;
 
+    @NotNull(message = "La fecha no debe ir vacia")
     @Column(name = "fecha_envio")
     private LocalDateTime fecha_envio;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "id_usuario")
     private Integer id_usuario;
 

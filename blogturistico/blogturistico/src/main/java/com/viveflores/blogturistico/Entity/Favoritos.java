@@ -1,6 +1,7 @@
 package com.viveflores.blogturistico.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "favoritos")
@@ -10,12 +11,15 @@ public class Favoritos {
     @Column(name = "id_favorito")
     private Integer id_favorito;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "id_usuario")
     private Integer id_usuario;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "id_publicacion")
     private Integer id_publicacion;
 
+    @NotNull(message = "El campo no de ir vacio")
     @Column(name = "id_categoria")
     private Integer id_categoria;
 

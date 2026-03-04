@@ -1,6 +1,7 @@
 package com.viveflores.blogturistico.Service;
 
 import com.viveflores.blogturistico.Entity.Favoritos;
+import com.viveflores.blogturistico.Exception.NotFoundExcepcion;
 import com.viveflores.blogturistico.Repository.FavoritosRepository;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,8 @@ public class FavoritosServiceImplements implements FavoritosService{
 
     @Override
     public Favoritos getFavoritosById(Integer id) {
-        return favoritosRepository.findById(id).orElse(null);
+        return favoritosRepository.findById(id).orElseThrow(() ->
+                new NotFoundExcepcion("El id no existe"));
     }
 
     @Override
@@ -31,20 +33,20 @@ public class FavoritosServiceImplements implements FavoritosService{
 
     @Override
     public Favoritos updateFavoritos(Integer id, Favoritos favoritos) {
-        Favoritos favoritos1 = favoritosRepository.findById(id).orElse(null);
-        if(favoritos1 != null){
-            favoritos1.setId_usuario(favoritos.getId_usuario());
-            favoritos1.setId_publicacion(favoritos.getId_publicacion());
-            favoritos1.setId_categoria(favoritos.getId_categoria());
-        }else{
-            throw new IllegalArgumentException("El id no existe");
-        }
+        Favoritos favoritos1 = favoritosRepository.findById(id).orElseThrow(() ->
+                new NotFoundExcepcion("El id no existe"));
+
+        favoritos1.setId_usuario(favoritos.getId_usuario());
+        favoritos1.setId_publicacion(favoritos.getId_publicacion());
+        favoritos1.setId_categoria(favoritos.getId_categoria());
+
         return favoritosRepository.save(favoritos1);
     }
 
     @Override
     public void deleteFavoritos(Integer id) {
-        Favoritos favoritos = favoritosRepository.findById(id).orElse(null);
+        Favoritos favoritos = favoritosRepository.findById(id).orElseThrow(() ->
+                new NotFoundExcepcion("El id no existe"));
         favoritosRepository.delete(favoritos);
     }
 }

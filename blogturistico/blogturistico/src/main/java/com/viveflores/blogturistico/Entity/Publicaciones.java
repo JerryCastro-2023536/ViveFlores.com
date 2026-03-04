@@ -1,6 +1,8 @@
 package com.viveflores.blogturistico.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
@@ -12,12 +14,15 @@ public class Publicaciones {
     @Column(name = "id_publicacion")
     private Integer id_publicacion;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "nombre_publicacion")
     private String nombre_publicacion;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "descripcion")
     private String descripcion;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "direccion")
     private String direccion;
 
@@ -25,24 +30,31 @@ public class Publicaciones {
     @Column(name = "foto", columnDefinition = "blob")
     private byte[] foto;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "telefono")
     private Integer telefono;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "email_publicacion")
     private String email_publicacion;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "horario")
     private String horario;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "fecha_creacion")
     private LocalDate fecha_creacion;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "estado_publicacion")
     private String estado_publicacion;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "id_categoria")
     private Integer id_categoria;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "id_usuario")
     private Integer id_usuario;
 

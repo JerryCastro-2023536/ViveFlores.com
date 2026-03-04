@@ -1,6 +1,8 @@
 package com.viveflores.blogturistico.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
@@ -11,11 +13,13 @@ public class Evento {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "id_evento")
-    private Integer idEvento;
+    private Integer id_evento;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column (name = "nombre_evento")
-    private String nombreEvento;
+    private String nombre_evento;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column (name = "descripcion")
     private String descripcion;
 
@@ -23,32 +27,36 @@ public class Evento {
     @Column (name = "foto")
     private byte[] foto;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column (name = "fecha_inicio")
-    private LocalDateTime fechaInicio;
+    private LocalDateTime fecha_inicio;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column (name = "fecha_fin")
-    private LocalDateTime fechaFin;
+    private LocalDateTime fecha_fin;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column (name = "ubicacion")
     private String ubicacion;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column (name = "id_usuario")
-    private Integer idUsuario;
+    private Integer id_usuario;
 
-    public Integer getIdEvento() {
-        return idEvento;
+    public Integer getId_evento() {
+        return id_evento;
     }
 
-    public void setIdEvento(Integer idEvento) {
-        this.idEvento = idEvento;
+    public void setId_evento(Integer id_evento) {
+        this.id_evento = id_evento;
     }
 
-    public String getNombreEvento() {
-        return nombreEvento;
+    public String getNombre_evento() {
+        return nombre_evento;
     }
 
-    public void setNombreEvento(String nombreEvento) {
-        this.nombreEvento = nombreEvento;
+    public void setNombre_evento(String nombre_evento) {
+        this.nombre_evento = nombre_evento;
     }
 
     public String getDescripcion() {
@@ -67,20 +75,20 @@ public class Evento {
         this.foto = foto;
     }
 
-    public LocalDateTime getFechaInicio() {
-        return fechaInicio;
+    public LocalDateTime getFecha_inicio() {
+        return fecha_inicio;
     }
 
-    public void setFechaInicio(LocalDateTime fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public void setFecha_inicio(LocalDateTime fecha_inicio) {
+        this.fecha_inicio = fecha_inicio;
     }
 
-    public LocalDateTime getFechaFin() {
-        return fechaFin;
+    public LocalDateTime getFecha_fin() {
+        return fecha_fin;
     }
 
-    public void setFechaFin(LocalDateTime fechaFin) {
-        this.fechaFin = fechaFin;
+    public void setFecha_fin(LocalDateTime fecha_fin) {
+        this.fecha_fin = fecha_fin;
     }
 
     public String getUbicacion() {
@@ -91,11 +99,11 @@ public class Evento {
         this.ubicacion = ubicacion;
     }
 
-    public Integer getIdUsuario() {
-        return idUsuario;
+    public Integer getId_usuario() {
+        return id_usuario;
     }
 
-    public void setIdUsuario(Integer idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setId_usuario(Integer id_usuario) {
+        this.id_usuario = id_usuario;
     }
 }

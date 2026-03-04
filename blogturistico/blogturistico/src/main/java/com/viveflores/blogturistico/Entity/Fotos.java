@@ -1,6 +1,8 @@
 package com.viveflores.blogturistico.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
@@ -13,9 +15,11 @@ public class Fotos {
     @Column(name = "id_foto")
     private Integer id_foto;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "titulo_foto")
     private String titulo_foto;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "descripcion")
     private String descripcion;
 
@@ -23,9 +27,11 @@ public class Fotos {
     @Column(name = "foto")
     private byte[] foto;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "fecha_creacion")
     private LocalDate fecha_creacion;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "id_usuario")
     private Integer id_usuario;
 
